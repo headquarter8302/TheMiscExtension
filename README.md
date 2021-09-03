@@ -1,2 +1,2 @@
 # extension-template
-Template repo, nothing more
+An extension containing random stuff and functions.
