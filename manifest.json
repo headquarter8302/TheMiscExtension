@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  
+  "name": "TEMPLATE",
+  "description": "TEMPLATE",
+  "version": "SEMANTIC-VERSION",
+
+  "browser_action": {
+   "default_icon": "extension-icon.png",
+   "default_popup": "popup.html"
+  },
+}
