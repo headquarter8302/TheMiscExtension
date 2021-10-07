@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>mainMenu | TME</title>
-    <script src="popup.js"></script>
-    <link rel="stylesheet" href="popup.css">
-  </head>
-  <body>
-    <h1>mainMenu</h1>
-    <h2>Discord copy/paste</h2>
-    <ul>
-      <li><button onclick="copy()" class="copy" id="copy" value="pls fish">pls fish</button></li>
-      <li><button onclick="copy()" class="copy" id="copy" value="pls hunt">pls hunt</button></li>
-      <li><button onclick="copy()" class="copy" id="copy" value="pls dig">pls dig</button></li>
-    </ul>
-    <footer>By <code>headquarter8302</code> licensed under GNU GPL v2.0</footer>
-  </body>
+
+<head>
+  <title>mainMenu | TheMiscExtension</title>
+  <script>
+    // API runtime: Create new window
+    chrome.browserAction.onClicked.addListener(function (tab) {
+      chrome.windows.create({
+        url: chrome.runtime.getURL("popup.html"),
+        type: "popup"
+      });
+    });
+
+    // Copy funtion
+    function copy() {
+      let copyText = document.getElementById("copy").getAttribute("value");
+      navigator.clipboard.writeText(copyText.value);
+    };</script>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <h1>theMiscExtension</h1>
+  <h2>copyPastes</h2>
+  <h3>supportForms</h3>
+  <ul>
+    <li><span style="user-select:all;">https://support.discord.com/hc/en-us/requests/new</span></li>
+    <li><span style="user-select:all;">https://fandom.zendesk.com/hc/en-us/requests/new</span></li>
+  </ul>
+  <h3>discordCopyPaste</h3>
+  <ul>
+    <li><button onclick="copy()" class="copy" id="copy" value="pls fish">pls fish</button></li>
+    <li><button onclick="copy()" class="copy" id="copy" value="pls hunt">pls hunt</button></li>
+    <li><button onclick="copy()" class="copy" id="copy" value="pls dig">pls dig</button></li>
+  </ul>
+  <h2>pickerTools</h2>
+  <h3>colorPicker</h3>
+    <input type="color">
+  <h3>datePicker</h3>
+    <input type="date">
+  <footer>By <code>headquarter8302</code>. licensed under GNU GPL v2.0</footer>
+</body>
+
 </html>
